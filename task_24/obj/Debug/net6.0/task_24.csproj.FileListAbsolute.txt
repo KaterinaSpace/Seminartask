@@ -1,0 +1,15 @@
+D:\geekbrains\2023 учеба\Seminartask\task_24\bin\Debug\net6.0\task_24.exe
+D:\geekbrains\2023 учеба\Seminartask\task_24\bin\Debug\net6.0\task_24.deps.json
+D:\geekbrains\2023 учеба\Seminartask\task_24\bin\Debug\net6.0\task_24.runtimeconfig.json
+D:\geekbrains\2023 учеба\Seminartask\task_24\bin\Debug\net6.0\task_24.dll
+D:\geekbrains\2023 учеба\Seminartask\task_24\bin\Debug\net6.0\task_24.pdb
+D:\geekbrains\2023 учеба\Seminartask\task_24\obj\Debug\net6.0\task_24.csproj.AssemblyReference.cache
+D:\geekbrains\2023 учеба\Seminartask\task_24\obj\Debug\net6.0\task_24.GeneratedMSBuildEditorConfig.editorconfig
+D:\geekbrains\2023 учеба\Seminartask\task_24\obj\Debug\net6.0\task_24.AssemblyInfoInputs.cache
+D:\geekbrains\2023 учеба\Seminartask\task_24\obj\Debug\net6.0\task_24.AssemblyInfo.cs
+D:\geekbrains\2023 учеба\Seminartask\task_24\obj\Debug\net6.0\task_24.csproj.CoreCompileInputs.cache
+D:\geekbrains\2023 учеба\Seminartask\task_24\obj\Debug\net6.0\task_24.dll
+D:\geekbrains\2023 учеба\Seminartask\task_24\obj\Debug\net6.0\refint\task_24.dll
+D:\geekbrains\2023 учеба\Seminartask\task_24\obj\Debug\net6.0\task_24.pdb
+D:\geekbrains\2023 учеба\Seminartask\task_24\obj\Debug\net6.0\task_24.genruntimeconfig.cache
+D:\geekbrains\2023 учеба\Seminartask\task_24\obj\Debug\net6.0\ref\task_24.dll
