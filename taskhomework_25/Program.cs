@@ -6,8 +6,9 @@ Console.WriteLine("Введите первое число A");
 int numA = GetInputNumber();
 Console.WriteLine("Введите второе число B");
 int numB = GetInputNumber();
-ToDegree(numA, numB);
 
+var result = ToDegree(numA, numB);
+Console.WriteLine(result);
 
 int GetInputNumber()
 {
@@ -15,13 +16,23 @@ int GetInputNumber()
   return int.Parse(input);
 }
 
-void ToDegree(int a, int b)
+// void ToDegree(int a, int b)
+// {
+//   int result = 1;
+//   for (int i = 1; i <= b; i++)
+//   {
+//     result = result * a;
+
+//   }
+//   Console.WriteLine(result);
+// }
+
+int ToDegree (int a, int b)
 {
   int result = 1;
   for (int i = 1; i <= b; i++)
   {
     result = result * a;
-
   }
-  Console.WriteLine(result);
+  return result; 
 }
