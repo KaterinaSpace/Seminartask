@@ -22,7 +22,7 @@ void PrintArray(int[] col)
 
 Console.Clear();
 
-int[] array = new int[100];
+int[] array = new int[5];
 FillArray(array);
 PrintArray(array);
 
