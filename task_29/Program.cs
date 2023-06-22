@@ -16,7 +16,7 @@ Console.WriteLine("Введите максимальное значение эл
 int max = ReadNumberFromConsole();
 
 
-FillArray(array);
+FillArray(array, min, max);
 PrintArray(array);
 int ReadNumberFromConsole()
 {
@@ -34,7 +34,7 @@ void PrintArray(int[] array)
   Console.WriteLine(array[^1] + "}");
 }
 
-void FillArray(int[] array)
+void FillArray(int[] array, int min, int max)
 {
   int length = array.Length;
   for (int i = 0; i < length; i++)
