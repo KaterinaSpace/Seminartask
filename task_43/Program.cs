@@ -1,49 +1,24 @@
-﻿// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+﻿// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1,
+// y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
-// 0, 7, 8, -2, -2 -> 2
-
-// 1, -7, 567, 89, 223-> 3
- 
-//variant 1, любое количнство раз
-
-int count = CountNum();
-Console.WriteLine($"Количество чисел больше 0: {count}");
-
-int CountNum()
+void Intersection(double k1, double b1, double k2, double b2)
 {
-  int count = 0; 
-  string word;
-
-
-  while (true)
+  double k_sub = k1 - k2;
+  if (k_sub != 0)
   {
-    Console.Write("Введите любое число:");
-    word = Console.ReadLine();
-
-    if (word == "") return count;
-    else if (int.Parse(word) > 0) count += 1;
+    double x = (b2 - b1) / (k1 - k2);
+    double y = k1 * x + b1;
+    Console.WriteLine($"Intersection point: ({x}; {y})");
   }
+  else if (k1 == k2 && b1 == b2)
+    Console.WriteLine("There are an infinite number of intersection points.");
+  else
+    Console.WriteLine("There is no intersection point.");
 }
 
-//variant 2,заранее знаем сколко будет значении от пользователя
-
-Console.Write("Сколько чисел хотели бы ввести?: ");
-int a = int.Parse(Console.ReadLine()!);
-int result = checked(a);
-Console.WriteLine($"Количество чисел больше 0: {result}");
-
-int check(int num)
-{
-  int count = 0;
-  {
-    Console.Write($"Число{i}:");
-    int a = int.Parse(Console.ReadLine()!);
-    if (a > 0) count++;
-  }
-  return count; 
-}
-
-
-
-
-
+double K_1 = double.Parse(Console.ReadLine()!);
+double b_1 = double.Parse(Console.ReadLine()!);
+double k_2 = double.Parse(Console.ReadLine()!);
+double b_2 = double.Parse(Console.ReadLine()!);
+Intersection(K_1, b_1, k_2, b_2);
