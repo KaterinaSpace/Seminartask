@@ -10,7 +10,7 @@
 
 
 
-int[,] MassNums(int row, int column, int from, int to)
+int[,] MassNums(int row, int column)
 {
   int[,] arr = new int[row, column];
 
@@ -39,5 +39,5 @@ int row_num = int.Parse(Console.ReadLine()!);
 Console.Write("Enter the number of columns: ");
 int column_num = int.Parse(Console.ReadLine()!);
 
-int[,] mass = MassNums(row_num, column_num, start, stop);
+int[,] mass = MassNums(row_num, column_num);
 Print(mass);
