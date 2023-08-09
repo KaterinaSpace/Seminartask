@@ -27,7 +27,7 @@ PrintArray(massiveIndexMinElem);
 Console.WriteLine();
 int[,] resultMatrix = RemoveMinRowColumn(mass, massiveIndexMinElem[0], massiveIndexMinElem[1] );
 PrintMatrix(resultMatrix);
- 
+
 int[,] RemoveMinRowColumn(int[,] matrix, int minRow, int minColumn)
 {
   int[,] newmatrix = new int[mass.GetLength(0)-1, mass.GetLength(1)-1];

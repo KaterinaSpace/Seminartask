@@ -5,7 +5,7 @@
 
 int rows = 3;
 int columns = 4;
-int minRandom = 1;
+int minRandom = 2;
 int maxRandom = 9;
 
 int[,] mass = FillArrayRandomInt(rows, columns, minRandom, maxRandom);
