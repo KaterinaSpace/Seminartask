@@ -49,7 +49,7 @@ int start = int.Parse(Console.ReadLine()!);
 Console.Write("Enter the max number of massive");
 int stop = int.Parse(Console.ReadLine()!);
 
-int[,] mass = MassNums(row_num, column_num, start, stop);
+int[,] mass = MassNums(row_num, column_num, s tart, stop);
 Print(mass);
 NewArr(mass);
 Print(mass);

@@ -8,42 +8,49 @@
 
 // 8 7,8 -7,1 9
 
-// double[,] MassNums(int row, int column, double from, double to)
-// {
-//   int[,] arr = new int[row, column];
-//   for (i = 0; i < row; i++)
-//     for (j = 0; j < column; j++)
-//     arr[i , j] = new Random().NextDouble(from, to + 1);
-//   return arr;
-// }
+double[,] MassNums(int rows, int columns, int min, int max)
+{
+    double[,] arr = new double[rows, columns];
 
-// void Print(double[,] arr) 
-// {
-//   int row = arr.GetLength(0);
-//   int column= arr.GetLength(1);
+    for (int i = 0; i < arr.GetLength(0); i++ )
+{ 
+        for (int j = 0; j < arr.GetLength(1); j++)
+        
+          {  
+            arr[i, j] = New Random().Next(min, max+1 )/ 10.0;
+          }
+            return arr; 
+    
+}
+}
 
-//   for(i = 0; i < row; i++ )
-//   {
-//     for (j = 0; j < column; j++)
-//     Console.Write($"{arr[i,j], 4}");
-//     Console.WriteLine(); 
-//   }
-//   Console.WriteLine();
-// }
+void Print(double[,] arr)
+{
+    int row = arr.GetLength(0);
+    int column = arr.GetLength(1);
 
-// Console.Write("Enter the number for rows:");
-// int row_num = int.Parse(Console.ReadLIne()!);
-// Console.Wrtite("Enter the number for columns:");
-// int column_num = int.Parse(Console.ReadLine()!);
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+            Console.Write($"{arr[i, j], 4}");
+            Console.WriteLine();
+    }
+    Console.WriteLine();
+}
 
-// Console.Write("Enter the min number of massive:");
-// double start = double.Parse(Console.REadLIne()!);
-// Console.Write("Enter the max number of massive:");
-// double stop = double.Parse(Console.ReadLine()!);
 
-// double[,] mass = MassNums(row_num, column_num, start, stop);
-// Print(mass);
+Console.Write("Enter the number of rows:");
+int row_num = int.Parse(Console.ReadLine()!);
+Console.Write("Enter the number of columns:");
+int column_num = int.Parse(Console.ReadLine()!);
 
+Console.Write("Enter the min number of massive:");
+int minNum = int.Parse(Console.ReadLine()!);
+Console.Write("Enter the max number of massive:");
+int maxNum = int.Parse(Console.ReadLine()!);
+
+double[,] matrix = MassNums(row_num, column_num, minNum, maxNum);
+Print(matrix);
 
 
 
