@@ -7,45 +7,43 @@
 
 int[,] MassNums(int row, int column, int from, int to)
 {
-  int[,] arr = new int[row, column];
+    int[,] arr = new int[row, column];
 
-  for (int i = 0; i < row; i++)
-    for (int j = 0; j < column; j++)
-      arr[i, j] = new Random().Next(from, to + 1);
-  return arr;
+    for (int i = 0; i < row; i++)
+        for (int j = 0; j < column; j++)
+            arr[i, j] = new Random().Next(from, to + 1);
+    return arr;
 }
 
 void Print(int[,] arr)
 {
-  int row = arr.GetLength(0);
-  int column = arr.GetLength(1);
+    int row = arr.GetLength(0);
+    int column = arr.GetLength(1);
 
-
-  for (int i = 0; i < row; i++)
-  {
-    for (int j = 0; j < column; j++)
-      Console.Write($" {arr[i, j], 4} ");
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+            Console.Write($" {arr[i, j], 4} ");
+        Console.WriteLine();
+    }
     Console.WriteLine();
-  }
-  Console.WriteLine();
 }
 
 int SumDiag(int[,] array)
 {
-  int count = 0; 
-  for (int i = 0; i < array.GetLength(0); i++ )
-  {
-    for (int j = 0; j < array.GetLength(1);  j++)
+    int count = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-      if(i==j)
-      {
-        count = count + array[i, j];
-      }
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (i == j)
+            {
+                count = count + array[i, j];
+            }
+        }
     }
-  }
-  return count;
+    return count;
 }
-
 
 Console.Write("Enter the number of rows:");
 int row_num = int.Parse(Console.ReadLine()!);
@@ -57,10 +55,10 @@ int start = int.Parse(Console.ReadLine()!);
 Console.Write("Enter the max number of massive ");
 int stop = int.Parse(Console.ReadLine()!);
 
-int[,] mass =MassNums(row_num, column_num, start, stop);
+int[,] mass = MassNums(row_num, column_num, start, stop);
 Print(mass);
 
-Console.WriteLine(SumDiag( mass));
+Console.WriteLine(SumDiag(mass));
 
 
 // int[,] MassNum(int row, int column, int from, int to)

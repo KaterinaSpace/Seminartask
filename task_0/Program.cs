@@ -29,7 +29,6 @@ void Print(int[,] arr)
   Console.WriteLine();
 }
 
-
 Console.Write("Enter the number of rows:");
 int row_num = int.Parse(Console.ReadLine()!);
 Console.Write("Enter the number of columns:");

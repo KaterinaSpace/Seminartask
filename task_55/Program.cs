@@ -13,12 +13,12 @@ PrintArray(mass);
 
 if (rows == columns)
 {
-   ReplaceRowsToColumns(mass);
-  PrintArray(mass);
+    ReplaceRowsToColumns(mass);
+    PrintArray(mass);
 }
 else
 {
-  Console.WriteLine(" в таком массиве заменить строки на столбцы нельзя");
+    Console.WriteLine(" в таком массиве заменить строки на столбцы нельзя");
 }
 
 // void ReplaceRowsToColumns(int[,] array)
@@ -38,49 +38,48 @@ else
 
 void ReplaceRowsToColumns(int[,] array)
 {
-     int length = array.GetLength(0);
-     for  (int i = 0; i < length; i++)
-     {
-      for (int j = 0; j < i; j++)
-      {
-        int temp = array[i, j];
-        array[i, j] = array[j, i];
-        array[j, i] = temp;
-      }
-     }
+    int length = array.GetLength(0);
+    for (int i = 0; i < length; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            int temp = array[i, j];
+            array[i, j] = array[j, i];
+            array[j, i] = temp;
+        }
+    }
 }
-
 
 int ReadNumberIntFromConsole(string message = "")
 {
-  if (message != "")
-    Console.Write(message);
-  string input = Console.ReadLine()!;
-  return int.Parse(input);
+    if (message != "")
+        Console.Write(message);
+    string input = Console.ReadLine()!;
+    return int.Parse(input);
 }
 
 int[,] FillArrayRandomInt(int rowsArray, int columnsArray, int min, int max)
 {
-  int[,] arrayRandom = new int[rowsArray, columnsArray];
-  for (int i = 0; i < rowsArray; i++)
-  {
-    for (int j = 0; j < columnsArray; j++)
+    int[,] arrayRandom = new int[rowsArray, columnsArray];
+    for (int i = 0; i < rowsArray; i++)
     {
-      arrayRandom[i, j] = new Random().Next(min, max);
+        for (int j = 0; j < columnsArray; j++)
+        {
+            arrayRandom[i, j] = new Random().Next(min, max);
+        }
     }
-  }
-  return arrayRandom;
+    return arrayRandom;
 }
 
 void PrintArray(int[,] PrArray)
 {
-  for (int i = 0; i < PrArray.GetLength(0); i++)
-  {
-    for (int j = 0; j < PrArray.GetLength(1); j++)
+    for (int i = 0; i < PrArray.GetLength(0); i++)
     {
-      Console.Write($"{PrArray[i, j],4}");
+        for (int j = 0; j < PrArray.GetLength(1); j++)
+        {
+            Console.Write($"{PrArray[i, j], 4}");
+        }
+        Console.WriteLine();
     }
     Console.WriteLine();
-  }
-  Console.WriteLine();
 }
