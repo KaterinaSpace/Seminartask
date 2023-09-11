@@ -37,7 +37,7 @@ int[] FindMin(int[,] matrix)
     int[] minIndex = new int[2];
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLe ngth(1); j++)
         {
             if (matrix[i, j] < minValue)
             {
@@ -60,7 +60,7 @@ int[,] TrimmArray(int[,] matrix, int[] minIndex)
         if (i == minIndex[0])
             continue;
         for (int j = 0; j < matrix.GetLength(1); j++)
-        {
+				
             if (j == minIndex[1])
                 continue;
             result[row, columns] = matrix[i, j];
