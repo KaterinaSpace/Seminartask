@@ -6,5 +6,8 @@
   "html.format.templating": true,
   "omnisharp.organizeImportsOnFormat": true,
   "csharp.debug.suppressJITOptimizations": true,
-  "csharpier.enableDebugLogs": false
+  "csharpier.enableDebugLogs": false,
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  }
 }

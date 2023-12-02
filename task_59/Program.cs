@@ -25,22 +25,21 @@ Console.WriteLine();
 int[] massiveIndexMinElem = MatrixMinElemIndexes(mass);
 PrintArray(massiveIndexMinElem);
 Console.WriteLine();
-int[,] resultMatrix = RemoveMinRowColumn(mass, massiveIndexMinElem[0], massiveIndexMinElem[1] );
+int[,] resultMatrix = RemoveMinRowColumn(mass, massiveIndexMinElem[0], massiveIndexMinElem[1]);
 PrintMatrix(resultMatrix);
 
 int[,] RemoveMinRowColumn(int[,] matrix, int minRow, int minColumn)
 {
-  int[,] newmatrix = new int[mass.GetLength(0)-1, mass.GetLength(1)-1];
+  int[,] newmatrix = new int[mass.GetLength(0) - 1, mass.GetLength(1) - 1];
   int m = 0, n = 0;
-  for (int i = 0; i < newmatrix.GetLength(0);i++)
+  for (int i = 0; i < newmatrix.GetLength(0); i++)
   {
-    if (m == minRow)  m++;
+    if (m == minRow) m++;
     for (int j = 0; j < newmatrix.GetLength(1); j++)
     {
-    if (n == minColumn)  n++;
-    newmatrix[i, j] = matrix[m, n];
-    n++; 
-      
+      if (n == minColumn) n++;
+      newmatrix[i, j] = matrix[m, n];
+      n++;
     }
 
     m++;
@@ -64,7 +63,7 @@ int[] MatrixMinElemIndexes(int[,] array)
       }
     }
   }
-  return new int[] {rowMinElem, columnMinElem};
+  return new int[] { rowMinElem, columnMinElem };
 }
 
 
