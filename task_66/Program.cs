@@ -2,11 +2,7 @@
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
-Console.WriteLine("Введите число М:");
-int m = int.Parse(Console.ReadLine());
 
-Console.WriteLine("Введите число N:");
-int n = int.Parse(Console.ReadLine());
 
 if (m < n)
 {
@@ -27,3 +23,9 @@ int SumNumbers(int num1, int num2)
         return (num1 + SumNumbers(num1 + 1, num2));
     }
 }
+
+Console.WriteLine("Введите число М:");
+int m = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Введите число N:");
+int n = int.Parse(Console.ReadLine());
